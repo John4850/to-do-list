@@ -25,9 +25,11 @@ class TaskForm extends Component {
         return /*html*/`
         <form class="task-form">
         <p>
+            <label for="name">New Task</label>
             <input id="name" name="name required placeholder="Task Name">
         </p>
         <p>
+            <label for="description">Description</label>
             <input id="description" name="description" required>
         </p>
         <p><button>Add Task</button>

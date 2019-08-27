@@ -1,26 +1,60 @@
-* {
+body {
     display: flex;
     flex-direction: column;
     background-color: lightsalmon;
     align-items: center;
 }
-header {
+header nav {
+    display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 h1{
     font-size: 3em;
 }
 h2 {
     font-size: 2em;
+    background-color: transparent;
 }
-
-.task-container {
+ul.tasks {
+    display: flex;
+    height: auto;
+}
+div.task-container {
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     align-items: center;
     justify-content: space-evenly;
     height: 200px;
-    width: 300px;
+    width: 300px;   
+    background-color: transparent;
+    background-image: url('../../../public/assets/notepad.png');
+    background-size: 350px;
+    background-position-y: -50px;
+    background-position-x: -25px;
+}
+p {
+background-color: transparent;
+}
 
+form input {
+    background-color: lightgray;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    border: 1px solid black;
+    height: auto;
+    margin: 5px;;
+    padding: 5px;
+}
+form button {
+    margin: 5px;
+}
+form label {
+    display: flex;
+    align-content: center;
+    background-color: gray;
 }
