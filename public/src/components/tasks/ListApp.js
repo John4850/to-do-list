@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from '../app/Header.js';
 import TaskList from '../tasks/TaskList.js';
-import { getTasks } from '../../services/to-do-api.js';
+import { getList } from '../../services/to-do-api.js';
 
 
 class ListApp extends Component {
@@ -10,13 +10,13 @@ class ListApp extends Component {
         dom.prepend(header.renderDOM());
 
         const main = dom.querySelector('main');
-        const tasks = new TaskList ({ tasks: [] });
-        main.appendChild(tasks.renderDOM());
+        const taskList = new TaskList ({ tasks: [] });
+        main.appendChild(taskList.renderDOM());
 
 
-        getTasks()
+        getList()
             .then(tasks => {
-                tasks.update({ tasks });
+                taskList.update({ tasks });
             })
             .finally(() => {
                 setTimeout(() => {}, 500);

@@ -6,7 +6,7 @@ class TaskList extends Component {
         const tasks = this.props.tasks;
 
         tasks.forEach(task => {
-            const props = { tasks: task };
+            const props = { task: task };
             const taskItem = new TaskItem(props);
             const taskItemDOM = taskItem.renderDOM();
             dom.appendChild(taskItemDOM);
@@ -16,7 +16,7 @@ class TaskList extends Component {
     renderHTML() {
     
         return /*html*/`
-            <ul class='tasks'<ul>
+            <ul class='tasks'></ul>
         `;
     }
 }

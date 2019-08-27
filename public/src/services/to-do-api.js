@@ -20,10 +20,10 @@ export function getList() {
     return fetchWithError(url);
 }
 
-// export function getTask(id) {  
-//     const url = `${URL}/list/${id}`;
-//     return fetchWithError(url);
-// }
+export function getTasks(id) {  
+    const url = `${URL}/list/${id}`;
+    return fetchWithError(url);
+}
 
 // export function addTask(task) {
 //     const url = `${URL}/task`;
