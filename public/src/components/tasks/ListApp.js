@@ -2,7 +2,6 @@ import Component from '../Component.js';
 import Header from '../app/Header.js';
 import TaskList from '../tasks/TaskList.js';
 import { getTasks } from '../../services/to-do-api.js';
-import { isMainThread } from 'worker_threads';
 
 
 class ListApp extends Component {
@@ -10,8 +9,9 @@ class ListApp extends Component {
         const header = new Header({ title: 'List of Tasks' });
         dom.prepend(header.renderDOM());
 
+        const main = dom.querySelector('main');
         const tasks = new TaskList ({ tasks: [] });
-        isMainThread.appendChild(tasks.renderDOM());
+        main.appendChild(tasks.renderDOM());
 
 
         getTasks()
