@@ -25,16 +25,16 @@ export function getTasks(id) {
     return fetchWithError(url);
 }
 
-// export function addTask(task) {
-//     const url = `${URL}/task`;
-//     return fetchWithError(url, {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(task)
-//     });
-// }
+export function addTask(task) {
+    const url = `${URL}/task`;
+    return fetchWithError(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(task)
+    });
+}
 
 // export function removeTask(id) {
 //     const url = `${URL}/list/${id}`;
