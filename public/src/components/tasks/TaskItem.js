@@ -8,7 +8,7 @@ class TaskItem extends Component {
                 <div class="task-container">
                     <h2>${task.name}</h2>
                     <p class="task-description">${task.description}</p>
-                    <p>${task.done}</p>
+                    <p>Completed: ${task.done}</p>
                 </div>
             </li>
         `;
