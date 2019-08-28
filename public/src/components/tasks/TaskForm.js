@@ -9,11 +9,13 @@ class TaskForm extends Component {
         
             const task = {
                 name: formData.get('name'),
-                description: formData.get('description')
+                description: formData.get('description'),
+                done: false
             };
             addTask(task)
                 .then(() => {
                     alert('Task Added!');
+                    window.location.reload(true);
                 })
                 .catch(err => {
                     console.log('Task Not Saved : ', err);
@@ -26,13 +28,14 @@ class TaskForm extends Component {
         <form class="task-form">
         <p>
             <label for="name">New Task</label>
-            <input id="name" name="name required placeholder="Task Name">
+            <input id="name" name="name" required placeholder="Task Name">
         </p>
         <p>
             <label for="description">Description</label>
             <input id="description" name="description" required>
         </p>
         <p><button>Add Task</button>
+        </form>
         `;
     }
 }

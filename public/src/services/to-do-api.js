@@ -16,12 +16,12 @@ function fetchWithError(url, options) {
 }
 
 export function getList() {  
-    const url = `${URL}/list`;
+    const url = `${URL}/task`;
     return fetchWithError(url);
 }
 
 export function getTasks(id) {  
-    const url = `${URL}/list/${id}`;
+    const url = `${URL}/task/${id}`;
     return fetchWithError(url);
 }
 
@@ -29,6 +29,18 @@ export function addTask(task) {
     const url = `${URL}/task`;
     return fetchWithError(url, {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(task)
+    });
+}
+export function updateTask(task) {
+    const url = `${URL}/task/${task.id}`;
+    console.log(url);
+
+    return fetchWithError(url, {
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
