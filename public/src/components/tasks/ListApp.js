@@ -14,6 +14,7 @@ class ListApp extends Component {
         
         const taskList = new TaskList({ tasks: [],
             onUpdate: task => {
+                console.log(task);
                 return updateTask(task)
                     .then(updated => {
                         // part 2: integrate back into our list

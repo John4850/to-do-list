@@ -30,8 +30,8 @@ ul.tasks {
 .task-container {
     display: flex;
     flex-direction: row;
-    background-color: blue;
     flex-wrap: wrap;
+    background-color: blue;
     height: auto;
     width: 80vw;
     border: 5px solid green;

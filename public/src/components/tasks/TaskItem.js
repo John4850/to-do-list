@@ -24,8 +24,7 @@ class TaskItem extends Component {
                 <div class="task-item">
                     <h2>${task.name}</h2>
                     <p class="task-description">${task.description}</p>
-                    <img class="display-${task.done}" src="../../public/assets/checkmark.png">
-                    <p>
+                    <img class="display-${task.done}" src="../assets/checkmark.png">                    <p>
                     <button class="complete-task">Completed: ${task.done}</button>
                     </p>
                 </div>

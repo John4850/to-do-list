@@ -36,8 +36,7 @@ export function addTask(task) {
     });
 }
 export function updateTask(task) {
-    const url = `${URL}/task/${task.id}`;
-    console.log(url);
+    const url = `${URL}/task/`;
 
     return fetchWithError(url, {
         method: 'PUT',
