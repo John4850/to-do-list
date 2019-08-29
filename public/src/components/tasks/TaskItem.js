@@ -20,16 +20,16 @@ class TaskItem extends Component {
     renderHTML() {
         const task = this.props.task;
         return /*html*/`>
-            <li>
+            
                 <div class="task-item">
                     <h2>${task.name}</h2>
                     <p class="task-description">${task.description}</p>
-                    <img class="display-${task.done}" src="../assets/checkmark.png">                    <p>
+                    <img class="display-${task.done}" src="../assets/checkmark.png">
+                    <p>
                     <button class="complete-task">Completed: ${task.done}</button>
                     </p>
                 </div>
-            </li>
-        </div>
+        
         `;
     }
 }

@@ -3,6 +3,8 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: lightsalmon;
+    height: 100vh;
+    width: auto;
 }
 header {
     display: flex;
@@ -23,19 +25,21 @@ h2 {
     font-size: 2em;
     background-color: transparent;
 }
-ul.tasks {
+/* ul.tasks {
     display: flex;
     height: auto;
-}
+} */
 .task-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: blue;
-    height: auto;
+    min-height: 300px;
     width: 80vw;
     border: 5px solid green;
-    margin-bottom: 5px;
+    margin: auto;
 }
 .display-false {
     display: none;
