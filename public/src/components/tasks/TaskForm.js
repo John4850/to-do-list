@@ -15,7 +15,7 @@ class TaskForm extends Component {
             addTask(task)
                 .then(() => {
                     alert('Task Added!');
-                    window.location.reload(true);
+
                 })
                 .catch(err => {
                     console.log('Task Not Saved : ', err);

@@ -36,7 +36,6 @@ h2 {
     justify-content: space-evenly;
     align-items: center;
     background-color: blue;
-    min-height: 300px;
     width: 80vw;
     border: 5px solid green;
     margin: auto;
@@ -84,4 +83,9 @@ form label {
     display: flex;
     align-content: center;
     background-color: gray;
+}
+.task-item img {
+    height: 200px;
+    width: 300px;
+    position: absolute;
 }

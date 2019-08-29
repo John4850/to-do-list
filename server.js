@@ -42,11 +42,11 @@ app.post('/api/task', (req, res) => {
     const task = req.body;
     console.log(task);
     client.query(`
-        INSERT INTO tasks (id, name, description, done)
-        VALUES ($1, $2, $3, $4)
+        INSERT INTO tasks (name, description, done)
+        VALUES ($1, $2, $3)
         RETURNING *;
         `,
-    [task.id, task.name, task.description, task.done]
+    [task.name, task.description, task.done]
     )
         .then(result =>{
             res.json(result.rows[0]);
@@ -58,7 +58,7 @@ app.post('/api/task', (req, res) => {
         });
 
 });
-app.put('api/task/:id', (req, res) => {
+app.put('/api/task/:id', (req, res) => {
     const id = req.params.id;
     const task = req.body;
     console.log('server called PUT');
