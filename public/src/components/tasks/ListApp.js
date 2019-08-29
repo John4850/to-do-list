@@ -16,7 +16,6 @@ class ListApp extends Component {
             onUpdate: task => {
                 return updateTask(task)
                     .then(updated => {
-                        console.log(task);
                         // part 2: integrate back into our list
                         const tasks = this.state.tasks;
                         
@@ -45,11 +44,7 @@ class ListApp extends Component {
                         location.reload(true);
                     });
             }
-
         });
-// -----------------------------_FIX THIS ^ ^ ^ -------------//
-
-
         main.appendChild(form.renderDOM());
             
         getList()
