@@ -1,11 +1,11 @@
 import Component from '../Component.js';
-import ListApp from '../tasks/ListApp.js';
+import Header from '../app/Header.js';
 
 class App extends Component {
 
     onRender(dom) {
-        const listApp = new ListApp();
-        dom.prepend(listApp.renderDOM());
+        const header = new Header();
+        dom.prepend(header.renderDOM());
     }
 
     renderHTML() {
