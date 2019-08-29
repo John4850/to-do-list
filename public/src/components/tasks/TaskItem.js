@@ -9,7 +9,6 @@ class TaskItem extends Component {
         const completeTask = dom.querySelector('.complete-task');
         completeTask.addEventListener('click', () => {
             task.done = true;
-            console.log(task);
             onUpdate(task);
         });
 

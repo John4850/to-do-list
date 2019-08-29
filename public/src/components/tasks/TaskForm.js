@@ -3,6 +3,8 @@ import { addTask } from '../../services/to-do-api.js';
 
 class TaskForm extends Component {
     onRender(form) {
+        const onAdd = this.props.onAdd;
+
         form.addEventListener('submit', event => {
             event.preventDefault();
             const formData = new FormData(form);
@@ -12,7 +14,7 @@ class TaskForm extends Component {
                 description: formData.get('description'),
                 done: false
             };
-            addTask(task)
+            onAdd(task)
                 .then(() => {
                     alert('Task Added!');
 

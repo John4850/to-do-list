@@ -41,7 +41,7 @@ class ListApp extends Component {
                         taskList.update({ tasks });
                     })
                     .finally(() => {
-                        location.reload(true);
+                        // location.reload(true);
                     });
             }
         });
