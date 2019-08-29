@@ -7,29 +7,11 @@ import TaskForm from '../tasks/TaskForm.js';
 
 class ListApp extends Component {
     onRender(dom) {
-        const main = dom.querySelector('main');
         const header = new Header({ title: 'List of Tasks' });
+        const main = dom.querySelector('main');
         main.prepend(header.renderDOM());
-
         
-        const taskList = new TaskList({ tasks: [],
-            onUpdate: task => {
-                return updateTask(task)
-                    .then(updated => {
-                        // part 2: integrate back into our list
-                        const tasks = this.state.tasks;
-                        
-                        // what to do with updated?
-                        const index = tasks.indexOf(task.id);
-                        tasks.splice(index, 1, updated.id);
-
-                        taskList.update({ tasks });
-                        
-                    });
-            },
-        });
-        main.appendChild(taskList.renderDOM());
-            
+        
         const form = new TaskForm({
             onAdd: task => {
                 // part 1: do work on the server
@@ -46,6 +28,27 @@ class ListApp extends Component {
             }
         });
         main.appendChild(form.renderDOM());
+
+        const taskList = new TaskList({ tasks: [],
+            onUpdate: task => {
+                return updateTask(task)
+                    .then(updated => {
+                        // part 2: integrate back into our list
+                        const tasks = this.state.tasks;
+                        
+                        // what to do with updated?
+                        const index = tasks.indexOf(task);
+                        console.log(updated);
+
+                        tasks.splice(index, 1, updated);
+                        console.log(task);
+                        taskList.update({ tasks });
+                        
+                    });
+            },
+        });
+        main.appendChild(taskList.renderDOM());
+            
             
         getList()
             .then(tasks => {
