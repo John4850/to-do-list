@@ -95,3 +95,6 @@ form label {
 .no-display {
     display: none;
 }
+.hidden {
+    display: hidden;
+}
