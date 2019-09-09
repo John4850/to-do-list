@@ -1,5 +1,5 @@
 import Component from '../Component.js';
-import Header from './Header.js';
+import Header from '../app/Header.js';
 
 class App extends Component {
 
@@ -13,7 +13,7 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Main App Page</p>
+                    <p></p>
                 </main>
             </div>
         `;
