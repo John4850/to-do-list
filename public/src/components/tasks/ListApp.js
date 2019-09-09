@@ -38,10 +38,8 @@ class ListApp extends Component {
                         
                         // what to do with updated?
                         const index = tasks.indexOf(task);
-                        console.log(updated);
 
                         tasks.splice(index, 1, updated);
-                        console.log(task);
                         taskList.update({ tasks });
                         
                     });
